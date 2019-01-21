@@ -69,7 +69,7 @@ public class Capatchafy extends JavaPlugin
             Bukkit.getLogger().severe("[Capatchafy] The 'security-level' config field was not between 1 and 3. Setting security level to 2.");
         }
         enabled = configs.config.getBoolean("always-on");
-        server = HttpdServer.startServer();
+        server = HttpdServer.getServer();
         listeners.setURLMessage();
         Bukkit.getLogger().info("[Capatchafy] Running in security level " + securityLevel + ".");
     }
@@ -81,7 +81,6 @@ public class Capatchafy extends JavaPlugin
         {
             return; //Prevents errors on the first startup.
         }
-        
         try
         {
             configs.saveNames(true);
@@ -91,7 +90,7 @@ public class Capatchafy extends JavaPlugin
         {
             e.printStackTrace();
         }
-        server.stop();
+        server.shutdownNow();
         configs.ipList.clear(); //TODO See if removing this line affects functionality.
     }
 }

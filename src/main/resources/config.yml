@@ -11,6 +11,9 @@ always-on: false
 #3 - Strict. You must verify each time you join.
 security-level: 2
 
+# IP to bind the httpd to, leave blank to use hostname
+binding-ip: ''
+
 #Hostname - The ip that you want Capatchafy to listen on goes here.
 #You don't HAVE to change this, but leaving it will cause problems when a player tries to find the link to the capatcha.
 hostname: 127.0.0.1

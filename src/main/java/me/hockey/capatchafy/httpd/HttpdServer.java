@@ -27,8 +27,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 public class HttpdServer
 {
-    public static final String BASE_URI = "http://" + Capatchafy.configs.getHostname() + ":" + Capatchafy.configs.getPort() + "/";
-    public static HttpServer startServer() 
+    public static final String BASE_URI = "http://" + (Capatchafy.configs.getBindingIP().isEmpty() ? Capatchafy.configs.getHostname() : Capatchafy.configs.getBindingIP()) + ":" + Capatchafy.configs.getPort() + "/";
+    public static HttpServer getServer()
     {
         final ResourceConfig rc = new ResourceConfig().packages("me.hockey.capatchafy.httpd");
         final Set<Class<?>> classes = new HashSet<Class<?>>();

@@ -139,6 +139,11 @@ public class Configuration
         return config.getString("hostname");
     }
 
+    public String getBindingIP()
+    {
+        return config.getString("binding-ip");
+    }
+
     public String getPort()
     {
         return config.getString("port");

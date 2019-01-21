@@ -16,6 +16,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>maven-central</id>
+            <url>http://central.maven.org/maven2/</url>
+        </repository>
     </repositories>
     
     <dependencyManagement>
@@ -48,6 +52,11 @@
             <artifactId>junit</artifactId>
             <version>4.9</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

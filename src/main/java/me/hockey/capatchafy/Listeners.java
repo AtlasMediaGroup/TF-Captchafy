@@ -58,6 +58,10 @@ public class Listeners implements Listener
         String ip = event.getAddress().toString().replaceAll("/", "");
         if (!Capatchafy.configs.isAuthorized(ip))
         {
+            if (url == null)
+            {
+                setURLMessage();
+            }
             event.disallow(PlayerLoginEvent.Result.KICK_OTHER, ChatColor.RED + "" + ChatColor.BOLD + "Yikes, we're under attack! Please solve the capatcha.\n" +
                     ChatColor.WHITE + "Please go to " + ChatColor.GOLD + url + ChatColor.WHITE + " in your web browser and solve the capatcha.\n" +
                     "Once solved successfully, you will be able to join.");
