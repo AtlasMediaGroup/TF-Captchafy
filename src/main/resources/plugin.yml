@@ -1,10 +1,10 @@
-name: Capatchafy
+name: Captchafy
 version: 1.1.0-TF
-main: me.hockey.capatchafy.Capatchafy
+main: me.hockey.captchafy.Captchafy
 
 commands:
-  capatchafy:
+  captchafy:
       
-capatchafy.command:
-     description: Allow a player to use the capatchafy command.
+captchafy.command:
+     description: Allow a player to use the captchafy command.
      default: op
