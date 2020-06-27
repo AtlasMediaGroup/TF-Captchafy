@@ -62,9 +62,12 @@ public class Listeners implements Listener
             {
                 setURLMessage();
             }
-            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, ChatColor.RED + "" + ChatColor.BOLD + "Yikes, we're under attack! Please solve the captcha.\n" +
-                    ChatColor.WHITE + "Please go to " + ChatColor.GOLD + url + ChatColor.WHITE + " in your web browser and solve the captcha.\n" +
-                    "Once solved successfully, you will be able to join.");
+            if (!Captchafy.plugin.tfh.isAdmin(event.getPlayer()))
+            {
+                event.disallow(PlayerLoginEvent.Result.KICK_OTHER, ChatColor.RED + "" + ChatColor.BOLD + "Yikes, we're under attack! Please solve the captcha.\n" +
+                        ChatColor.WHITE + "Please go to " + ChatColor.GOLD + url + ChatColor.WHITE + " in your web browser and solve the captcha.\n" +
+                        "Once solved successfully, you will be able to join.");
+            }
             return;
         }
         if (Captchafy.securityLevel == 3)

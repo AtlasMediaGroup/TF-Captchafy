@@ -35,6 +35,8 @@ public class Captchafy extends JavaPlugin
     public HttpServer server;
     
     public static boolean error = false;
+
+    public TFMHandler tfh;
     
     @Override
     public void onEnable()
@@ -43,6 +45,7 @@ public class Captchafy extends JavaPlugin
         configs = new Configuration();
         listeners = new Listeners();
         listeners.setThrottleSettings();
+        tfh = new TFMHandler();
         Bukkit.getPluginManager().registerEvents(listeners, this);
         getCommand("captchafy").setExecutor(new CaptchafyCommand());
         try

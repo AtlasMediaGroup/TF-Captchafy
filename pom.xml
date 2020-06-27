@@ -66,7 +66,18 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.TFPatches</groupId>
+            <artifactId>TotalFreedomMod</artifactId>
+            <version>5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Pravian</groupId>
+            <artifactId>Aero</artifactId>
+            <version>5f82926</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
